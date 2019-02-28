@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ADA Students feedback</title>
+<link rel="icon" type="image/x-icon" href="images/logo.png" />
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="title"><span >ADA</span> Students feedback</div>
+<div class="sidebyside">
+<div class="left-side">
+<div class="first_class">
+                        <img src="images/picture.png" alt="picture_login" >
+                </div >
+                <p class="font">To giv us feedback , because this <br> course is made for you ! 
+                    Because it's <br> all about you</p>
+                
+                <div class="second-par">
+                        <h5>Fill this Form form if you :</h5>
+                <ol>
+                    <li>- Find an error in the content or in the <br> quizzes</li>
+                    <li>- Have a feedback about instructors or the <br>experience</li>
+                    <li>- Have a seggestion on how to make the <br>course better</li>
+                </ol>     
+            </div> 
+</div>
+<!------------------------------------------------------------------->
+
+<div class="right-side">
+    <form action="" id="contactForm">
+        <legend id="super_title">Email Us</legend>
+        <!------------------------------------------------------------------->
+        <ul><div class="left">
+            <li><label for="name" id="name">Name</label></li>
+            <li><input type="text" name="name" id="nom" placeholder="Name" required></li>
+            <li>
+              </div>
+              <!------------------------------------------------------------------->
+              <div class="right">
+                
+                <label for="track" id="track" >Track</label>
+                <select name="track"  required>
+                    <option value="ai" selected>AI</option>
+                    <option value="web">Web</option>
+                    <option value="game">Game</option>
+                </select>
+            </li>
+</div>
+<!------------------------------------------------------------------->   
+    <br>
+            <li><label for="slide_name" id="slide_name">Slide name (or object)</label></li>
+            <li><input type="text" name="slide_name" placeholder="Slide name" required></li>
+
+            <div class="spaces">
+            <li><label for="message" id="message">Message</label></li>
+            <li> <textarea name="message" id="textarea-message" placeholder="Write a message" cols="30" rows="10" required></textarea></li></div>
+            <li><button  type="submit" value="Submit">submit</button>
+            </li>       
+        </ul>
+    </form>
+</div>
+<!------------------------------------------------------------------->
+</div>
+</body>
+<script src="js/main.js"></script>
+<!--<script src="https://www.gstatic.com/firebasejs/5.8.4/firebase.js" >firebase();</script>-->
+</html>
