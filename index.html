@@ -11,7 +11,7 @@
 
             <div class="container">
               <div class="title">School Registration Form</div>
-              <form action="/action_page.php">
+              <form  id="contactForm"> <!--action="/action_page.php"-->
                 <div class="form-group">
                   <label for="email">Email:</label>
                   <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
@@ -35,10 +35,10 @@
                 <div class="form-group">
                     <label for="optradio"> Select Gender</label>
                         <div class="radio">
-                                <label><input type="radio" name="optradio" checked id="radio">Male</label>
+                                <label><input type="radio" name="optradio" checked id="radio_male">Male</label>
                               </div>
                               <div class="radio">
-                                <label><input type="radio" name="optradio" id="radio">Female</label>
+                                <label><input type="radio" name="optradio" id="radio_female">Female</label>
                               </div>
                 </div>
                 <div class="form-group">
@@ -63,7 +63,10 @@
             </div>
             
     </body>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.5/firebase.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    
+    <!---->
 </html>
