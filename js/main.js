@@ -1,11 +1,11 @@
 // Initialize Firebase
 var config = {
-    apiKey: "AIzaSyCCPAO832mQoO4SwcENH4WI_xPEPUu24oQ",
-    authDomain: "ada-students-feedback.firebaseapp.com",
-    databaseURL: "https://ada-students-feedback.firebaseio.com",
-    projectId: "ada-students-feedback",
-    storageBucket: "ada-students-feedback.appspot.com",
-    messagingSenderId: "540908607534"
+    apiKey: "AIzaSyBR7YJgRtM4yz_L28SHarwUh_SEBCOl6QQ",
+    authDomain: "fir-contact-form-14137.firebaseapp.com",
+    databaseURL: "https://fir-contact-form-14137.firebaseio.com",
+    projectId: "fir-contact-form-14137",
+    storageBucket: "fir-contact-form-14137.appspot.com",
+    messagingSenderId: "715334786610"
   };
   firebase.initializeApp(config);
 
@@ -17,11 +17,20 @@ document.getElementById('contactForm').addEventListener('submit', submitForm);
 function submitForm(e){
     e.preventDefault();
     //get values
-var email = getInputVal('email');
+/*var email = getInputVal('email') ; 
 var username = getInputVal('username');
 var password = getInputVal('password');
 var firstname = getInputVal('firstname');
 var lastname = getInputVal('lastname');
+var comment = getInputVal('comment');*/
+//--------
+var email = document.getElementById('email').value;
+var username = document.getElementById('username').value;
+var password = document.getElementById('password').value;
+var firstname = document.getElementById('firstname').value;
+var lastname = document.getElementById('lastname').value;
+var comment = document.getElementById('comment').value;
+//-----------
 
 //save message
 saveMessage(email , username , password , firstname , lastname);
