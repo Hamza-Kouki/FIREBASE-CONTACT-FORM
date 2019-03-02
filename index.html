@@ -1,68 +1,69 @@
-<!DOCTYPE html>
+<!Doctype html>
 <html>
-<head>
-<title>ADA Students feedback</title>
-<link rel="icon" type="image/x-icon" href="images/logo.png" />
-<link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+    <head>
+        <title>FIREBASE-CONTACT-FORM</title>
+        <link rel="icon" type="image/x-icon" href="images/logo.svg" />
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
 
-<div class="title"><span >ADA</span> Students feedback</div>
-<div class="sidebyside">
-<div class="left-side">
-<div class="first_class">
-                        <img src="images/picture.png" alt="picture_login" >
-                </div >
-                <p class="font">To giv us feedback , because this <br> course is made for you ! 
-                    Because it's <br> all about you</p>
-                
-                <div class="second-par">
-                        <h5>Fill this Form form if you :</h5>
-                <ol>
-                    <li>- Find an error in the content or in the <br> quizzes</li>
-                    <li>- Have a feedback about instructors or the <br>experience</li>
-                    <li>- Have a seggestion on how to make the <br>course better</li>
-                </ol>     
-            </div> 
-</div>
-<!------------------------------------------------------------------->
+    </head>
+    <body>
 
-<div class="right-side">
-    <form action="" id="contactForm">
-        <legend id="super_title">Email Us</legend>
-        <!------------------------------------------------------------------->
-        <ul><div class="left">
-            <li><label for="name" id="name">Name</label></li>
-            <li><input type="text" name="name" id="nom" placeholder="Name" required></li>
-            <li>
-              </div>
-              <!------------------------------------------------------------------->
-              <div class="right">
-                
-                <label for="track" id="track" >Track</label>
-                <select name="track"  required>
-                    <option value="ai" selected>AI</option>
-                    <option value="web">Web</option>
-                    <option value="game">Game</option>
-                </select>
-            </li>
-</div>
-<!------------------------------------------------------------------->   
-    <br>
-            <li><label for="slide_name" id="slide_name">Slide name (or object)</label></li>
-            <li><input type="text" name="slide_name" placeholder="Slide name" required></li>
-
-            <div class="spaces">
-            <li><label for="message" id="message">Message</label></li>
-            <li> <textarea name="message" id="textarea-message" placeholder="Write a message" cols="30" rows="10" required></textarea></li></div>
-            <li><button  type="submit" value="Submit">submit</button>
-            </li>       
-        </ul>
-    </form>
-</div>
-<!------------------------------------------------------------------->
-</div>
-</body>
-<script src="js/main.js"></script>
-<!--<script src="https://www.gstatic.com/firebasejs/5.8.4/firebase.js" >firebase();</script>-->
+            <div class="container">
+              <div class="title">School Registration Form</div>
+              <form action="/action_page.php">
+                <div class="form-group">
+                  <label for="email">Email:</label>
+                  <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+                </div>
+                <div class="form-group">
+                        <label for="username">User name:</label>
+                        <input type="text" class="form-control" id="username" placeholder="Enter User name" name="username">
+                      </div>
+                <div class="form-group">
+                  <label for="pwd">Password:</label>
+                  <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
+                </div>
+                <div class="form-group">
+                        <label for="firstname">First name:</label>
+                        <input type="texte" class="form-control" id="firstname" placeholder="Entre First name" name="firstname">
+                </div>
+                <div class="form-group">
+                        <label for="lastname">Last name:</label>
+                        <input type="texte" class="form-control" id="lastname" placeholder="Entre Last name" name="lastname">
+                </div>
+                <div class="form-group">
+                    <label for="optradio"> Select Gender</label>
+                        <div class="radio">
+                                <label><input type="radio" name="optradio" checked id="radio">Male</label>
+                              </div>
+                              <div class="radio">
+                                <label><input type="radio" name="optradio" id="radio">Female</label>
+                              </div>
+                </div>
+                <div class="form-group">
+                        <label for="remember"> Pick Days for Classes</label>
+                <div class="checkbox">
+                        <label><input type="checkbox" name="remember" id="Monday"> Monday</label>
+                        <label><input type="checkbox" name="remember" id="Tuesday"> Tuesday</label>
+                        <label><input type="checkbox" name="remember" id="Wednesday"> Wednesday</label>
+                        <label><input type="checkbox" name="remember" id="Thursday"> Thursday</label>
+                        <label><input type="checkbox" name="remember" id="Friday"> Friday</label>
+                      </div>
+                </div>
+                <div class="form-group">
+                        <label for="comment">Comment:</label>
+                        <textarea class="form-control" rows="5" id="comment"></textarea>
+                      </div>
+                <div class="checkbox">
+                  <label><input type="checkbox" name="remember"> Remember me</label>
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+              </form>
+            </div>
+            
+    </body>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/main.js"></script>
 </html>

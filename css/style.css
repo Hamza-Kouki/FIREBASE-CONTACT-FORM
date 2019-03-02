@@ -1,130 +1,25 @@
 body{
-    background-color: #92BDE7;
-        margin: 25px;
-    
-    }
-    .first_class img{
-        width : 340px;
-        height: 200px;
-        margin-left: -1%;
-        margin-top: 10%;
-        
-    }
-   .font , #super_title{
-    font-weight: 1000;
-    font-size :large;
-    color: #485E74;
-      margin-left: 2em;
-    }
-    /************************************************************/
-.second-par{
-       font-size: 1em;
-        color: #485E74;
-          margin-left: 2em;
-        }
-        .second-par li , .right-side li{
-            list-style-type: none;
-             }
-
-        /************************************************************/
-    /************************************************************/
-
-    .sidebyside{
-      padding-top: 3%;
-      padding-left: 5%;
-      padding-right: 5%;
-        max-width: 1134px;
-        max-height: 500px;
-        
-        }
-    .left-side, .right-side { 
-      height: 600px;
-      -webkit-box-shadow: 0px -8px 21px 1px rgba(184,178,184,1);
-    }
-    .left-side{
-    width : 334px;
-    background-color: #C9E6FF;
-    float: left;
-    }
-    .right-side{
-    width : 800px;
-    background-color: #F9FEFF;
-    float: right;
-
+    background-image: url("../images/backround.jpg") ;
+    background-size:100%;
+    background-attachment: fixed;
+    height:100%;
+    width:100%
     }
     
-    .right {
-        float: right;
-        margin-right : 400px;
+    .container{
+        background-color: #e679b07d;
+        height : 850px;
     }
-    .left{
-        float: left;
+    .title{
+        color : #f9ca3d;
+        font-size:-webkit-xxx-large;
+        font-weight: 600;
+        text-align: center;
+        margin-top: 10px;
     }
-    /*************************************/
-    input[type=text], select , textarea{
-        
-        padding: 12px 20px;
-        margin: auto  0;
-        
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        box-sizing: border-box;
-        
-    
-      }
-      textarea{
-          height :90px;
-      }
-      
-      button {
-        width: 90%;
-        background-color: #B9DAF8;
-        color: black;
-        padding: 14px 20px;
-        border: none;
-        cursor: pointer;
-        
-      }
-
-      
-     button:hover {
-        background-color: #cfe7fc;
-        color :white;
-      }
-            label {
-      width: 50%;
-      }
-      select , textarea {
-      width:90%;
-      }
-      .spaces  .left , #submit , #slide_name {
-       margin-top :15px;
-      }
-      /************************/
-      #super_title{
-        font-size :x-large;
-        margin-top : 0.9em;
-      }
-      #name , #slide_name , #message{
-        color: #485E74;
-        font-size :large;
-  
-      }
-      #track{
-           color: #485E74;
-        font-size :large;
-      }
-      .spaces {
-          margin-top : 20px;
-      }
-      /*****************************/
-      .title{
-          font: bolder;
-          font-size: 200%;
-          color : #485E74;
-          padding-left: 5%;
-          padding-top : -5%;
-      }
-      .title span{
-          color: white;
-      }
+    .title:hover{
+        color : #ffffff;
+        font-size:xx-large;
+        transition-delay: 1s; /* delays for 1 second */
+       -webkit-transition-delay: 0.3s;
+    }
