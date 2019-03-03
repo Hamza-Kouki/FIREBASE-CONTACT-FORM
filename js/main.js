@@ -17,19 +17,19 @@ document.getElementById('contactForm').addEventListener('submit', submitForm);
 function submitForm(e){
     e.preventDefault();
     //get values
-/*var email = getInputVal('email') ; 
+var email = getInputVal('email') ; 
 var username = getInputVal('username');
 var password = getInputVal('password');
 var firstname = getInputVal('firstname');
 var lastname = getInputVal('lastname');
-var comment = getInputVal('comment');*/
+var comment = getInputVal('comment');
 //--------
-var email = document.getElementById('email').value;
+/*var email = document.getElementById('email').value;
 var username = document.getElementById('username').value;
 var password = document.getElementById('password').value;
 var firstname = document.getElementById('firstname').value;
 var lastname = document.getElementById('lastname').value;
-var comment = document.getElementById('comment').value;
+var comment = document.getElementById('comment').value;*/
 //-----------
 
 //save message
