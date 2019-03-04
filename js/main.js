@@ -14,6 +14,7 @@ var config = {
 // Listner for form submit
 document.getElementById('contactForm').addEventListener('submit', submitForm);
 
+
 function submitForm(e){
     e.preventDefault();
     //get values
@@ -22,33 +23,76 @@ var username = getInputVal('username');
 var password = getInputVal('password');
 var firstname = getInputVal('firstname');
 var lastname = getInputVal('lastname');
-var comment = getInputVal('comment');
-//--------
-/*var email = document.getElementById('email').value;
-var username = document.getElementById('username').value;
-var password = document.getElementById('password').value;
-var firstname = document.getElementById('firstname').value;
-var lastname = document.getElementById('lastname').value;
-var comment = document.getElementById('comment').value;*/
-//-----------
+var days = getInputChekbox();
+var textarea = getInputVal('textarea');
+var gender = getInputRadio();
+
 
 //save message
-saveMessage(email , username , password , firstname , lastname);
-}
+saveMessage(email , username , password , firstname , lastname , days ,textarea, gender);
 
+}
+//////////////////////////////////////////////////////////
 //Function to get form values 
 function getInputVal(id){
     return document.getElementById(id).value;
 }
+//////////////////////////////////////////////////////////
+//Function to get values from checkbox
+function getInputChekbox(){
+    //-------------------------------
+    var Monday= null; var Tuesday = null;var Wednesday = null; var Thursday =null; var Thursday = null; var Friday =null;
+if(document.getElementById('Monday').checked){
+     Monday = document.getElementById('Monday').value;
+}
+if(document.getElementById('Tuesday').checked){
+     Tuesday = document.getElementById('Tuesday').value;
+}
+if(document.getElementById('Wednesday').checked){
+    Wednesday = document.getElementById('Wednesday').value;
+}
+if(document.getElementById('Thursday').checked){
+    Thursday = document.getElementById('Thursday').value;
+}
+if(document.getElementById('Friday').checked){
+    Friday = document.getElementById('Friday').value;
+}
+
+var array = [Monday, Tuesday, Wednesday, Thursday, Friday ]
+//console.log(Monday, Tuesday, Wednesday, Thursday, Friday);
+return array;
+             
+            }
+       
+//Function to get values form radio 
+function getInputRadio(){
+   var male =null ;
+     var famele = null;
+        if(document.getElementById('male').checked){
+            male = document.getElementById('male').value;
+        }
+        if(document.getElementById('famele').checked){
+            famele = document.getElementById('famele').value;
+        }
+        var array = [male, famele]
+        return array;
+    }
+//////////////////////////////////////////////////////////
+
 
 //save message to firebase
-function saveMessage(email , username , firstname , lastname){
+function saveMessage(email , username , password , firstname , lastname ,days ,textarea){
     var newMessageRef = messagesRef.push();
     newMessageRef.set({
         email : email,
         username : username,
         password : password,
         firstname : firstname , 
-        lastname : lastname 
+        lastname : lastname ,
+        days: days,
+        textarea : textarea , 
+        gender : gender,
+        
+
     });
 }
