@@ -24,13 +24,21 @@ var password = getInputVal('password');
 var firstname = getInputVal('firstname');
 var lastname = getInputVal('lastname');
 var days = getInputChekbox();
-var textarea = getInputVal('textarea');
 var gender = getInputRadio();
+var textarea = getInputVal('textarea');
 
 
 //save message
-saveMessage(email , username , password , firstname , lastname , days ,textarea, gender);
+saveMessage(email , username , password , firstname , lastname , days , gender,textarea);
+//alert message
+document.querySelector('.alert').style.display = 'block';
 
+//Hide alert after 3 seconds
+setTimeout(function(){
+    document.querySelector('.alert').style.display = 'none';
+},3000)
+// clear form
+document.getElementById('contactForm').reset();
 }
 //////////////////////////////////////////////////////////
 //Function to get form values 
@@ -66,22 +74,23 @@ return array;
        
 //Function to get values form radio 
 function getInputRadio(){
-   var male =null ;
-     var famele = null;
+   var male =null ; var famele = null;
+
         if(document.getElementById('male').checked){
             male = document.getElementById('male').value;
         }
         if(document.getElementById('famele').checked){
             famele = document.getElementById('famele').value;
         }
-        var array = [male, famele]
+        var  array = [famele , male ]
         return array;
+      //  console.log(male ,famele)
     }
 //////////////////////////////////////////////////////////
 
 
 //save message to firebase
-function saveMessage(email , username , password , firstname , lastname ,days ,textarea){
+function saveMessage(email , username , password , firstname , lastname ,days , gender, textarea){
     var newMessageRef = messagesRef.push();
     newMessageRef.set({
         email : email,
@@ -90,9 +99,7 @@ function saveMessage(email , username , password , firstname , lastname ,days ,t
         firstname : firstname , 
         lastname : lastname ,
         days: days,
-        textarea : textarea , 
         gender : gender,
-        
-
+        textarea : textarea , 
     });
 }
